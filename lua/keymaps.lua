@@ -48,4 +48,14 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+vim.keymap.set('i', 'jk', '<ESC>', {})
+
+-- Center view when moving half a page up or down
+vim.keymap.set('n', '<C-d>', '<C-d>zz')
+vim.keymap.set('n', '<C-u>', '<C-u>zz')
+
+-- Center view when searching
+vim.keymap.set('n', 'n', 'nzzzv')
+vim.keymap.set('n', 'N', 'Nzzzv')
+
 -- vim: ts=2 sts=2 sw=2 et
